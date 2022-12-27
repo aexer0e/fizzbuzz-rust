@@ -24,17 +24,17 @@ fn fizzbuzz_to(n: u32) {
 }
 
 fn fizzbuzz(n: u32) {
-    let mut mystr: String = String::new();
+    let mut out: String = String::new();
 
     for point in FIZZBUZZ_DATA.iter() {
         if (point.condition)(n) {
-            mystr.push_str(point.word);
+            out.push_str(point.word);
         }
     }
 
-    if mystr.len() == 0 {
-        mystr = n.to_string()
+    if out.len() == 0 {
+        out = n.to_string()
     }
 
-    println!("{mystr}" )
+    println!("{mystr}")
 }
